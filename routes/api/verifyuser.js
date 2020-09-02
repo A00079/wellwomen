@@ -5,7 +5,7 @@ const msgs = require('../../email/email.msgs');
 // Load User model
 const User = require("../../models/User");
 
-router.post("/", (req, res) => {
+router.get("/", (req, res) => {
     const { id } = req.params
 
     User.findById(id)
@@ -34,3 +34,5 @@ router.post("/", (req, res) => {
         })
         .catch(err => console.log(err))
 });
+
+module.exports = router;

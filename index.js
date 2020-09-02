@@ -21,7 +21,7 @@ app.use(cors());
 // Routes
 const users = require("./routes/api/users");
 app.use('/api/user/submitserway/create', SubmitSerway);
-app.get('/email/confirm/:id', VerifyUser)
+app.use('/email/confirm/:id', VerifyUser)
 
 // DB Config
 const db = require("./config/keys").mongoURI;
