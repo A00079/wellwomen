@@ -7,6 +7,8 @@ const passport = require("passport");
 const path = require('path');
 const port = process.env.PORT || 5000;
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
+const VerifyUser = require('./routes/api/verifyuser.js');
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -19,7 +21,7 @@ app.use(cors());
 // Routes
 const users = require("./routes/api/users");
 app.use('/api/user/submitserway/create', SubmitSerway);
-app.get('/email/confirm/:id', SubmitSerway.confirmEmail)
+app.get('/email/confirm/:id', VerifyUser)
 
 // DB Config
 const db = require("./config/keys").mongoURI;
