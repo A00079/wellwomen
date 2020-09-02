@@ -8,7 +8,7 @@ const User = require("../../models/User");
 router.get("/", (req, res) => {
     const { id } = req.params
 
-    User.findById(id)
+    User.findById({_id: id})
         .then(user => {
 
             // A user with that id does not exist in the DB. Perhaps some tricky 
