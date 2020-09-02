@@ -48,8 +48,7 @@ router.post("/register", (req, res) => {
             .then(user =>{
               sendEmail(user.email, templates.confirm(user._id))
               .then(() =>{
-                user['msg'] = msgs.confirm;
-                res.json(user)
+                res.json({user,'msg':msgs.confirm})
               })
             })
             .catch(err => console.log(err));

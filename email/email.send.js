@@ -7,8 +7,8 @@ const credentials = {
   secure: true,
   auth: {
     // These environment variables will be pulled from the .env file
-    user: process.env.MAIL_USER, 
-    pass: process.env.MAIL_PASS  
+    user: 'officialcodes007@gmail.com', 
+    pass: 'Officialcodes@007'  
   }
 }
 
