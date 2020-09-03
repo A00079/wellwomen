@@ -9,9 +9,10 @@ const User = require("../../models/User");
 
 router.get("/", (req, res) => {
     const { id } = req.params
-
-    User.findById({_id:ObjectId(req.body.id)})
+    console.log('id',id)
+    User.findById({_id:ObjectId(id)})
         .then(user => {
+            console.log('user',user)
 
             // A user with that id does not exist in the DB. Perhaps some tricky 
             // user tried to go to a different url than the one provided in the 
