@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const msgs = require('../../email/email.msgs');
+const ObjectId = require('mongodb').ObjectID;
+
 
 // Load User model
 const User = require("../../models/User");
@@ -8,7 +10,7 @@ const User = require("../../models/User");
 router.get("/", (req, res) => {
     const { id } = req.params
 
-    User.findById({_id: id})
+    User.findById({_id:ObjectId(req.body.id)})
         .then(user => {
 
             // A user with that id does not exist in the DB. Perhaps some tricky 
