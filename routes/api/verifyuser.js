@@ -7,8 +7,9 @@ const ObjectId = require('mongodb').ObjectID;
 // Load User model
 const User = require("../../models/User");
 
-router.get("/", (req, res) => {
-    const { id } = req.params
+router.get("/:id", (req, res) => {
+    console.log('req',req)
+    const  id  = req.params.id
     console.log('id',id)
     User.findById({_id:ObjectId(id)})
         .then(user => {

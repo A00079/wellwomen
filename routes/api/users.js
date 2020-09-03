@@ -30,8 +30,8 @@ router.post("/register", (req, res) => {
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {
       return res.status(400).json({ email: "Email already exists" });
-    } 
-    if(!user) {
+    }
+    if (!user) {
       const newUser = new User({
         name: req.body.name,
         email: req.body.email,
@@ -45,11 +45,11 @@ router.post("/register", (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then(user =>{
+            .then(user => {
               sendEmail(user.email, templates.confirm(user._id))
-              .then(() =>{
-                res.json({user,'msg':msgs.confirm})
-              })
+                .then(() => {
+                  res.json({ user, 'msg': msgs.confirm })
+                })
             })
             .catch(err => console.log(err));
         });
@@ -87,39 +87,44 @@ router.post("/login", (req, res) => {
   User.findOne({ email }).then(user => {
     // Check if user exists
     if (!user) {
-      return res.status(404).json({ emailnotfound: "Email not found" });
+      return res.status(404).json({ emailnotfound: "Authorization failed" });
     }
+    if (user.confirmed) {
+      // Check password
+      bcrypt.compare(password, user.password).then(isMatch => {
+        if (isMatch) {
+          // User matched
+          // Create JWT Payload
+          const payload = {
+            id: user.id,
+            name: user.name
+          };
 
-    // Check password
-    bcrypt.compare(password, user.password).then(isMatch => {
-      if (isMatch) {
-        // User matched
-        // Create JWT Payload
-        const payload = {
-          id: user.id,
-          name: user.name
-        };
-
-        // Sign token
-        jwt.sign(
-          payload,
-          keys.secretOrKey,
-          {
-            expiresIn: 31556926 // 1 year in seconds
-          },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: "Bearer " + token
-            });
-          }
-        );
-      } else {
-        return res
+          // Sign token
+          jwt.sign(
+            payload,
+            keys.secretOrKey,
+            {
+              expiresIn: 31556926 // 1 year in seconds
+            },
+            (err, token) => {
+              res.json({
+                success: true,
+                token: "Bearer " + token
+              });
+            }
+          );
+        } else {
+          return res
+            .status(400)
+            .json({ passwordincorrect: "Authorization failed" });
+        }
+      });
+    }else{
+      return res
           .status(400)
-          .json({ passwordincorrect: "Password incorrect" });
-      }
-    });
+          .json({ passwordincorrect: "Authorization failed" });
+    }
   });
 });
 
