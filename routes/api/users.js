@@ -117,13 +117,13 @@ router.post("/login", (req, res) => {
         } else {
           return res
             .status(400)
-            .json({ passwordincorrect: "Authorization failed" });
+            .json({ error: "Authorization failed" });
         }
       });
     }else{
       return res
           .status(400)
-          .json({ passwordincorrect: "Authorization failed" });
+          .json({ error: "Please verify your email address." });
     }
   });
 });
