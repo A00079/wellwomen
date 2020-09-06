@@ -16,6 +16,95 @@ const User = require("../../models/User");
 // Load Admin model
 const Admin = require("../../models/Admin");
 
+
+// @route POST api/users/googlesignin
+// @desc Register user
+// @access Public
+
+router.post("/googlesignin", (req, res) => {
+
+  User.findOne({ email: req.body.email }).then(user => {
+    if (user) {
+      const payload = {
+        id: user.id,
+        name: user.name
+      };
+
+      // Sign token
+      jwt.sign(
+        payload,
+        keys.secretOrKey,
+        {
+          expiresIn: 31556926 // 1 year in seconds
+        },
+        (err, token) => {
+          res.json({
+            success: true,
+            _isAdmin: false,
+            token: "Bearer " + token
+          });
+        }
+      );
+    }
+    if (!user) {
+      const newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+      });
+      // save user
+      newUser
+        .save()
+        .then(user => {
+          const payload = {
+            id: user.id,
+            name: user.name
+          };
+
+          // Sign token
+          jwt.sign(
+            payload,
+            keys.secretOrKey,
+            {
+              expiresIn: 31556926 // 1 year in seconds
+            },
+            (err, token) => {
+              res.json({
+                success: true,
+                _isAdmin: false,
+                token: "Bearer " + token
+              });
+            }
+          );
+        })
+        .catch(err => console.log(err));
+    }
+    else if (user && !user.confirmed) {
+      sendEmail(user.email, templates.confirm(user._id))
+        .then(() => res.json({ msg: msgs.resend }))
+    }
+
+    // The user has already confirmed this email address
+    else {
+      res.json({ msg: msgs.alreadyConfirmed })
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // @route POST api/users/register
 // @desc Register user
 // @access Public
@@ -89,7 +178,7 @@ router.post("/login", (req, res) => {
   //Check if it's admin
   Admin.findOne({ admin_email_id }).then((admin) => {
     console.log('admin', admin)
-    if(admin){
+    if (admin) {
       if (admin.admin_email_id === email && admin.admin_password === password) {
         // Admin matched
         // Create JWT Payload
@@ -97,7 +186,7 @@ router.post("/login", (req, res) => {
           id: admin.id,
           name: admin.admin_email_id
         };
-  
+
         // Sign token
         jwt.sign(
           payload,
@@ -108,15 +197,14 @@ router.post("/login", (req, res) => {
           (err, token) => {
             res.json({
               success: true,
-              _isAdmin:true,
+              _isAdmin: true,
               token: "Bearer " + token
             });
           }
         );
       }
-    }else{
+    } else {
       // Find user by email
-      console.log('inside user')
       User.findOne({ email }).then(user => {
         // Check if user exists
         if (!user) {
@@ -143,7 +231,7 @@ router.post("/login", (req, res) => {
                 (err, token) => {
                   res.json({
                     success: true,
-                    _isAdmin:false,
+                    _isAdmin: false,
                     token: "Bearer " + token
                   });
                 }
