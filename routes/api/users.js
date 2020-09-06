@@ -13,6 +13,8 @@ const validateLoginInput = require("../../validation/login");
 
 // Load User model
 const User = require("../../models/User");
+// Load Admin model
+const Admin = require("../../models/Admin");
 
 // @route POST api/users/register
 // @desc Register user
@@ -82,50 +84,87 @@ router.post("/login", (req, res) => {
 
   const email = req.body.email;
   const password = req.body.password;
+  const admin_email_id = req.body.email;
 
-  // Find user by email
-  User.findOne({ email }).then(user => {
-    // Check if user exists
-    if (!user) {
-      return res.status(404).json({ error: "Authorization failed" });
-    }
-    if (user.confirmed) {
-      // Check password
-      bcrypt.compare(password, user.password).then(isMatch => {
-        if (isMatch) {
-          // User matched
-          // Create JWT Payload
-          const payload = {
-            id: user.id,
-            name: user.name
-          };
+  //Check if it's admin
+  Admin.findOne({ admin_email_id }).then((admin) => {
+    console.log('admin', admin)
+    if(admin){
+      if (admin.admin_email_id === email && admin.admin_password === password) {
+        // Admin matched
+        // Create JWT Payload
+        const payload = {
+          id: admin.id,
+          name: admin.admin_email_id
+        };
+  
+        // Sign token
+        jwt.sign(
+          payload,
+          keys.secretOrKey,
+          {
+            expiresIn: 31556926 // 1 year in seconds
+          },
+          (err, token) => {
+            res.json({
+              success: true,
+              _isAdmin:true,
+              token: "Bearer " + token
+            });
+          }
+        );
+      }
+    }else{
+      // Find user by email
+      console.log('inside user')
+      User.findOne({ email }).then(user => {
+        // Check if user exists
+        if (!user) {
+          return res.status(404).json({ error: "Authorization failed" });
+        }
+        if (user.confirmed) {
+          // Check password
+          bcrypt.compare(password, user.password).then(isMatch => {
+            if (isMatch) {
+              // User matched
+              // Create JWT Payload
+              const payload = {
+                id: user.id,
+                name: user.name
+              };
 
-          // Sign token
-          jwt.sign(
-            payload,
-            keys.secretOrKey,
-            {
-              expiresIn: 31556926 // 1 year in seconds
-            },
-            (err, token) => {
-              res.json({
-                success: true,
-                token: "Bearer " + token
-              });
+              // Sign token
+              jwt.sign(
+                payload,
+                keys.secretOrKey,
+                {
+                  expiresIn: 31556926 // 1 year in seconds
+                },
+                (err, token) => {
+                  res.json({
+                    success: true,
+                    _isAdmin:false,
+                    token: "Bearer " + token
+                  });
+                }
+              );
+            } else {
+              return res
+                .status(400)
+                .json({ error: "Authorization failed" });
             }
-          );
+          });
         } else {
           return res
             .status(400)
-            .json({ error: "Authorization failed" });
+            .json({ error: "Please verify your email address." });
         }
       });
-    }else{
-      return res
-          .status(400)
-          .json({ error: "Please verify your email address." });
     }
-  });
+  })
+    .catch((err) => {
+      return res.status(404).json({ error: "Something went wrong.Plz try again." });
+    })
 });
 
 module.exports = router;
