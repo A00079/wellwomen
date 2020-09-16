@@ -8,6 +8,8 @@ const path = require('path');
 const port = process.env.PORT || 5000;
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
+const PostBlogs = require('./routes/api/blogs.js');
+
 var forceSsl = require('force-ssl-heroku');
  
 
@@ -24,7 +26,7 @@ app.use(cors());
 const users = require("./routes/api/users");
 app.use('/api/user/submitserway/create', SubmitSerway);
 app.use('/email/confirm', VerifyUser)
-
+app.use('/api/admin/postBlog/create',PostBlogs)
 // DB Config
 const db = require("./config/keys").mongoURI;
 
