@@ -30,4 +30,15 @@ router.post("/", (req, res) => {
         .catch(err => console.log(err));
 });
 
+
+router.get("/", (req, res) => {
+
+    Blogs.find({})
+    .then(blog => {
+        res.json({
+            data: blog,
+        });
+    })
+    .catch(err => console.log(err));
+});
 module.exports = router;
