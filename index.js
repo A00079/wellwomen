@@ -27,6 +27,8 @@ app.use('/api/user/submitserway/create', SubmitSerway);
 app.use('/email/confirm', VerifyUser)
 app.use('/api/admin/postBlog/create',PostBlogs)
 app.use('/api/admin/getBlog/read',PostBlogs)
+app.use('/api/admin/updateBlog',PostBlogs)
+app.use('/api/admin/deleteBlog',PostBlogs)
 
 // DB Config
 const db = require("./config/keys").mongoURI;
