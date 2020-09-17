@@ -9,11 +9,10 @@ const port = process.env.PORT || 5000;
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
 const PostBlogs = require('./routes/api/blogs.js');
-
-// var forceSsl = require('force-ssl-heroku');
+const forceSsl = require('force-ssl-heroku');
  
 
-// app.use(forceSsl);
+app.use(forceSsl);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
