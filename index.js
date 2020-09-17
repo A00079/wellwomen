@@ -10,10 +10,10 @@ const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
 const PostBlogs = require('./routes/api/blogs.js');
 
-var forceSsl = require('force-ssl-heroku');
+// var forceSsl = require('force-ssl-heroku');
  
 
-app.use(forceSsl);
+// app.use(forceSsl);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
