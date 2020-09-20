@@ -29,6 +29,7 @@ app.use('/api/admin/postBlog/create',PostBlogs)
 app.use('/api/admin/getBlog/read',PostBlogs)
 app.use('/api/admin/updateBlog',PostBlogs)
 app.use('/api/admin/deleteBlog',PostBlogs)
+app.use('/api/admin/getUsers',users)
 
 // DB Config
 const db = require("./config/keys").mongoURI;

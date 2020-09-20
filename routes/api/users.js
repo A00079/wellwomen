@@ -255,4 +255,15 @@ router.post("/login", (req, res) => {
     })
 });
 
+
+router.get("/read", (req, res) => {
+
+  User.find({})
+      .then(users => {
+          res.json({
+              data: users,
+          });
+      })
+      .catch(err => console.log(err));
+});
 module.exports = router;
