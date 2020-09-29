@@ -1,5 +1,5 @@
 module.exports = {
-  mongoURI: "mongodb+srv://admin:officialcodes007@cluster0.1wkw3.mongodb.net/WellWomen?retryWrites=true&w=majority&ssl=true",
+  mongoURI: "mongodb://admin:officialcodes007@cluster0-shard-00-00.1wkw3.mongodb.net:27017,cluster0-shard-00-01.1wkw3.mongodb.net:27017,cluster0-shard-00-02.1wkw3.mongodb.net:27017/WellWomen?ssl=true&replicaSet=atlas-nrkdvr-shard-0&authSource=admin&retryWrites=true&w=majority",
   secretOrKey: "secret"
 };
 

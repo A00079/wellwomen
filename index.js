@@ -23,7 +23,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(cors());
 // Routes
 const users = require("./routes/api/users");
-app.use('/api/user/submitserway/create', SubmitSerway);
+app.use('/api/user/submitserway', SubmitSerway);
 app.use('/email/confirm', VerifyUser)
 app.use('/api/admin/postBlog/create',PostBlogs)
 app.use('/api/admin/getBlog/read',PostBlogs)
