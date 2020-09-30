@@ -15,6 +15,22 @@ const SerwayData = new Schema({
     type: String,
     required: true
   },
+  activity: {
+    type: String,
+    required: true
+  },
+  age: {
+    type: String,
+    required: true
+  },
+  eatinghabbit: {
+    type: String,
+    required: true
+  },
+  goal: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now

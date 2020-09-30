@@ -23,6 +23,10 @@ const BlogSchema = new Schema({
     type: String,
     required: true
   },
+  imageurl :{
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     required: true

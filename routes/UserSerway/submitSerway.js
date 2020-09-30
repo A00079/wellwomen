@@ -24,7 +24,11 @@ router.post('/create', function (req, res) {
             const newSerwayData = new SerwayData({
                 name: req.body.name,
                 email: req.body.email,
-                phone: req.body.phone
+                phone: req.body.phone,
+                activity: req.body.activity,
+                age: req.body.age,
+                eatinghabbit: req.body.eatinghabbit,
+                goal: req.body.goal,
             });
 
             newSerwayData
@@ -284,6 +288,18 @@ router.post('/create', function (req, res) {
                 .catch(err => console.log(err));
         }
     });
+});
+
+
+router.get("/read", (req, res) => {
+
+    SerwayData.find({})
+        .then(serway => {
+            res.json({
+                data: serway,
+            });
+        })
+        .catch(err => console.log(err));
 });
 
 module.exports = router;

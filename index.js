@@ -6,12 +6,37 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const path = require('path');
 const port = process.env.PORT || 5000;
+const multer = require("multer");
+
+
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
 const PostBlogs = require('./routes/api/blogs.js');
 const forceSsl = require('force-ssl-heroku');
- 
 
+// Image handler
+const fileStorage = multer.diskStorage({
+	filename: (req, file, cb) => {
+		cb(null, file.originalname);
+	},
+});
+
+const fileFilter = (req, file, cb) => {
+	if (
+		file.mimetype === "image/png" ||
+		file.mimetype === "image/jpg" ||
+		file.mimetype === "image/jpeg"
+	) {
+		cb(null, true);
+	} else {
+		cb(null, false);
+	}
+};
+
+ 
+app.use(
+	multer({ storage: fileStorage, fileFilter: fileFilter }).single("image"),
+);
 app.use(forceSsl);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -24,6 +49,8 @@ app.use(cors());
 // Routes
 const users = require("./routes/api/users");
 app.use('/api/user/submitserway', SubmitSerway);
+app.use('/api/user/submitserway', SubmitSerway);
+
 app.use('/email/confirm', VerifyUser)
 app.use('/api/admin/postBlog/create',PostBlogs)
 app.use('/api/admin/getBlog/read',PostBlogs)

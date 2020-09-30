@@ -4,6 +4,15 @@ const ObjectId = require('mongodb').ObjectID;
 
 // Load Blogs model
 const Blogs = require("../../models/Blogs");
+const { uploadCloud, deleteCloud } = require("../../config/cloudinaryConfig");
+
+
+// Find Image delete and Update
+// var imageUrlName = results[0].image;
+// var splitArry = imageUrlName.split("/");
+// var final = splitArry[splitArry.length - 1];
+// var public_id = path.parse(final).name;
+// deleteCloud(public_id);
 
 // @route POST api/admin/blogs
 // @desc Post admin blogs
@@ -11,25 +20,42 @@ const Blogs = require("../../models/Blogs");
 
 router.post("/", (req, res) => {
 
-    const newBlogPost = new Blogs({
-        title: req.body.Title,
-        shortdiscription: req.body.ShortDiscription,
-        youtubelink: req.body.Youtubelink,
-        anytag: req.body.AnyTags,
-        discription: req.body.Discription,
-        date: req.body.Date
+    if (!req.file) {
+        return res.status(422).json({
+            message: "No image provided",
+        });
+    }
 
-    });
-    // save post
-    newBlogPost
-        .save()
-        .then(() => {
-            res.json({
-                success: 'Post Created',
-            });
+    var imageUrl = req.file.path;
+
+    var imageName;
+    uploadCloud(imageUrl).then((imgRes) => {
+        imageName = imgRes.url;
+
+        const newBlogPost = new Blogs({
+            title: req.body.Title,
+            shortdiscription: req.body.ShortDiscription,
+            youtubelink: req.body.Youtubelink,
+            anytag: req.body.AnyTags,
+            discription: req.body.Discription,
+            date: req.body.Date,
+            imageurl: imageName
         })
-        .catch(err => console.log(err));
+        // save post
+        newBlogPost
+            .save()
+            .then(() => {
+                res.json({
+                    success: 'Post Created',
+                });
+            })
+            .catch(err => console.log(err));
+    });
+
 });
+
+
+
 
 router.get("/", (req, res) => {
 
