@@ -270,7 +270,7 @@ module.exports = {
                                 <table border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="http://wellwomen.herokuapp.com/confirm/${id}" target="_blank">CONFIRM EMAIL ADRESS</a> </td>
+                                      <td> <a href="https://www.curvicare.com/confirm/${id}" target="_blank">CONFIRM EMAIL ADRESS</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
