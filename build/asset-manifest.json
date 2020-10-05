@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.3934ea77.chunk.css",
-    "main.js": "/static/js/main.635b5ab0.chunk.js",
-    "main.js.map": "/static/js/main.635b5ab0.chunk.js.map",
+    "main.js": "/static/js/main.63a62ef3.chunk.js",
+    "main.js.map": "/static/js/main.63a62ef3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.62664e96.chunk.css": "/static/css/2.62664e96.chunk.css",
-    "static/js/2.ab43fb83.chunk.js": "/static/js/2.ab43fb83.chunk.js",
-    "static/js/2.ab43fb83.chunk.js.map": "/static/js/2.ab43fb83.chunk.js.map",
+    "static/js/2.a73cda3d.chunk.js": "/static/js/2.a73cda3d.chunk.js",
+    "static/js/2.a73cda3d.chunk.js.map": "/static/js/2.a73cda3d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.62ffc60a769d94ecbcf900ae60d4997e.js": "/precache-manifest.62ffc60a769d94ecbcf900ae60d4997e.js",
+    "precache-manifest.c5ab8de8aca08ec898d87788e9038be9.js": "/precache-manifest.c5ab8de8aca08ec898d87788e9038be9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.62664e96.chunk.css.map": "/static/css/2.62664e96.chunk.css.map",
     "static/css/main.3934ea77.chunk.css.map": "/static/css/main.3934ea77.chunk.css.map",
-    "static/js/2.ab43fb83.chunk.js.LICENSE.txt": "/static/js/2.ab43fb83.chunk.js.LICENSE.txt",
+    "static/js/2.a73cda3d.chunk.js.LICENSE.txt": "/static/js/2.a73cda3d.chunk.js.LICENSE.txt",
     "static/media/bg.jpg": "/static/media/bg.e5241971.jpg",
     "static/media/bg2.jpg": "/static/media/bg2.84378183.jpg",
     "static/media/bg3.jpg": "/static/media/bg3.e76de24b.jpg",
@@ -42,6 +42,10 @@
     "static/media/w5.jpg": "/static/media/w5.2faacf14.jpg",
     "static/media/w6.jpg": "/static/media/w6.8c8cdbb7.jpg",
     "static/media/OurWorking.css": "/static/media/weightloss.b9bdcfe3.jpg",
+    "static/media/women20.png": "/static/media/women20.0e793607.png",
+    "static/media/women30.png": "/static/media/women30.7f6e3f6d.png",
+    "static/media/women40.png": "/static/media/women40.1631cbd8.png",
+    "static/media/women50.png": "/static/media/women50.2f591a9b.png",
     "static/media/worktime.svg": "/static/media/worktime.65855ac7.svg",
     "static/media/worktime1.svg": "/static/media/worktime1.be3a343e.svg",
     "static/media/worktime2.svg": "/static/media/worktime2.65855ac7.svg"
@@ -49,8 +53,8 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.62664e96.chunk.css",
-    "static/js/2.ab43fb83.chunk.js",
+    "static/js/2.a73cda3d.chunk.js",
     "static/css/main.3934ea77.chunk.css",
-    "static/js/main.635b5ab0.chunk.js"
+    "static/js/main.63a62ef3.chunk.js"
   ]
 }
