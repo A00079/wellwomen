@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
@@ -10,6 +11,7 @@ const multer = require("multer");
 
 
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
+const Contact = require('./routes/Contact/contactus.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
 const PostBlogs = require('./routes/api/blogs.js');
 const forceSsl = require('force-ssl-heroku');
@@ -50,6 +52,7 @@ app.use(cors());
 const users = require("./routes/api/users");
 app.use('/api/user/submitserway', SubmitSerway);
 app.use('/api/user/submitserway', SubmitSerway);
+app.use('/api/user/contact', Contact);
 
 app.use('/email/confirm', VerifyUser)
 app.use('/api/admin/postBlog/create',PostBlogs)

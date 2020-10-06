@@ -2,15 +2,16 @@ const router = require('express').Router();
 const http = require('http');
 const nodemailer = require('nodemailer');
 const SerwayData = require("../../models/SerwayData");
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 let transport = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // use SSL
     auth: {
-        user: "officialcodes007@gmail.com",
-        pass: "Officialcodes@007"
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
     }
 });
 
@@ -35,14 +36,14 @@ router.post('/create', function (req, res) {
                 .save()
                 .then(user => {
                     const message = {
-                        from: 'officialcodes007@gmail.com', // Sender address
+                        from: process.env.MAIL_USER, // Sender address
                         to: req.body.email,         // recipients
-                        subject: 'Wellcome from Well Women.', // Subject line
+                        subject: 'Wellcome from Curvicare.', // Subject line
                         html: `
                 <!DOCTYPE html>
             <html lang="en">
             <head>
-            <title>Salted | A Responsive Email Template</title>
+            <title>Curvicare</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width">
             <style type="text/css">
@@ -280,7 +281,7 @@ router.post('/create', function (req, res) {
                             console.log(err)
                         } else {
                             console.log('mail has sent.');
-                            res.status(200).json({ 'msg': 'Thankyou for s journey with us' })
+                            res.status(200).json({ 'msg': 'Thankyou for starting journey with us' })
                             console.log(info);
                         }
                     });
