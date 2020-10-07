@@ -134,15 +134,16 @@ router.post("/register", (req, res) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
           newUser.password = hash;
-          newUser
-            .save()
-            .then(user => {
-              sendEmail(user.email, templates.confirm(user._id))
-                .then(() => {
+          sendEmail(req.body.email, templates.confirm('_' + Math.random().toString(36).substr(2, 9)))
+            .then(() => {
+              newUser
+                .save()
+                .then(user => {
                   res.json({ user, 'msg': msgs.confirm })
                 })
+                .catch(err => console.log(err));
             })
-            .catch(err => console.log(err));
+
         });
       });
     }
@@ -259,11 +260,11 @@ router.post("/login", (req, res) => {
 router.get("/read", (req, res) => {
 
   User.find({})
-      .then(users => {
-          res.json({
-              data: users,
-          });
-      })
-      .catch(err => console.log(err));
+    .then(users => {
+      res.json({
+        data: users,
+      });
+    })
+    .catch(err => console.log(err));
 });
 module.exports = router;
