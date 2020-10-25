@@ -18,9 +18,9 @@ router.post('/create', function (req, res) {
     console.log('sending email..', req.body);
 
     const message = {
-        from: 'officialcodes007@gmail.com', // Sender address
-        to: req.body.email,         // recipients
-        subject: 'Wellcome from Well Women.', // Subject line
+        from: req.body.email, // Sender address
+        to: 'officialcodes007@gmail.com',         // recipients
+        subject: 'User Contact Details', // Subject line
         html: `
                 <!DOCTYPE html>
             <html lang="en">
