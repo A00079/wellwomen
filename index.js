@@ -11,9 +11,11 @@ const multer = require("multer");
 
 
 const SubmitSerway = require('./routes/UserSerway/submitSerway.js');
+const RaiseTicket = require('./routes/RaiseTicket/RaiseTicket.js');
 const Contact = require('./routes/Contact/contactus.js');
 const VerifyUser = require('./routes/api/verifyuser.js');
 const PostBlogs = require('./routes/api/blogs.js');
+
 const forceSsl = require('force-ssl-heroku');
 
 // Image handler
@@ -53,7 +55,7 @@ const users = require("./routes/api/users");
 app.use('/api/user/submitserway', SubmitSerway);
 app.use('/api/user/submitserway', SubmitSerway);
 app.use('/api/user/contact', Contact);
-
+app.use('/api/user/raiseticket', RaiseTicket);
 app.use('/email/confirm', VerifyUser)
 app.use('/api/admin/postBlog/create',PostBlogs)
 app.use('/api/admin/getBlog/read',PostBlogs)
