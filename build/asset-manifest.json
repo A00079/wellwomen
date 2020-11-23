@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ebe84c7.chunk.css",
-    "main.js": "/static/js/main.dbdb3003.chunk.js",
-    "main.js.map": "/static/js/main.dbdb3003.chunk.js.map",
+    "main.css": "/static/css/main.3a4415da.chunk.css",
+    "main.js": "/static/js/main.3de9c856.chunk.js",
+    "main.js.map": "/static/js/main.3de9c856.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.c44f4cad.chunk.css": "/static/css/2.c44f4cad.chunk.css",
-    "static/js/2.78009f79.chunk.js": "/static/js/2.78009f79.chunk.js",
-    "static/js/2.78009f79.chunk.js.map": "/static/js/2.78009f79.chunk.js.map",
+    "static/js/2.693a8afe.chunk.js": "/static/js/2.693a8afe.chunk.js",
+    "static/js/2.693a8afe.chunk.js.map": "/static/js/2.693a8afe.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8fa3400b262d2bf3b62c7289986b504e.js": "/precache-manifest.8fa3400b262d2bf3b62c7289986b504e.js",
+    "precache-manifest.21a7a28ea6bda32b9ad6704984ab3a73.js": "/precache-manifest.21a7a28ea6bda32b9ad6704984ab3a73.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.c44f4cad.chunk.css.map": "/static/css/2.c44f4cad.chunk.css.map",
-    "static/css/main.2ebe84c7.chunk.css.map": "/static/css/main.2ebe84c7.chunk.css.map",
-    "static/js/2.78009f79.chunk.js.LICENSE.txt": "/static/js/2.78009f79.chunk.js.LICENSE.txt",
+    "static/css/main.3a4415da.chunk.css.map": "/static/css/main.3a4415da.chunk.css.map",
+    "static/js/2.693a8afe.chunk.js.LICENSE.txt": "/static/js/2.693a8afe.chunk.js.LICENSE.txt",
     "static/media/awardwinning.jpg": "/static/media/awardwinning.f7b2449d.jpg",
     "static/media/bg.jpg": "/static/media/bg.e5241971.jpg",
     "static/media/bg2.jpg": "/static/media/bg2.84378183.jpg",
@@ -27,7 +27,8 @@
     "static/media/community.jpg": "/static/media/community.87076ace.jpg",
     "static/media/downloads.png": "/static/media/downloads.630f0b4a.png",
     "static/media/drsnehal.webp": "/static/media/drsnehal.8f7fabcc.webp",
-    "static/media/home1.jpg": "/static/media/home1.2babf597.jpg",
+    "static/media/home.jpg": "/static/media/home.2babf597.jpg",
+    "static/media/home1.jpg": "/static/media/home1.8ec547ad.jpg",
     "static/media/home2.jpg": "/static/media/home2.08fcdc94.jpg",
     "static/media/hw_1.jpg": "/static/media/hw_1.ecee4bae.jpg",
     "static/media/hw_2.jpg": "/static/media/hw_2.d63e867c.jpg",
@@ -72,8 +73,8 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.c44f4cad.chunk.css",
-    "static/js/2.78009f79.chunk.js",
-    "static/css/main.2ebe84c7.chunk.css",
-    "static/js/main.dbdb3003.chunk.js"
+    "static/js/2.693a8afe.chunk.js",
+    "static/css/main.3a4415da.chunk.css",
+    "static/js/main.3de9c856.chunk.js"
   ]
 }
