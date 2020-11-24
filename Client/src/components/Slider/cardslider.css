@@ -1,0 +1,16 @@
+
+.awssld__content {
+  background: #F9AE08 !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.awssld__timer{
+  background: #fff !important;
+}
+/* .awssld__wrapper{
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+} */
+  

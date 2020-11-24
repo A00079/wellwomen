@@ -1,0 +1,77 @@
+
+  .bg-img-css{
+    background-image: url(../../assets/img/weightloss.jpg);
+    object-fit: contain;
+    object-fit: cover;
+    height: 46%;
+    background-size: cover;
+    background-position: center;
+  }
+  .special {
+    font-size: 48px;
+    font-family: Roboto;
+    line-height: 1.5em;
+    letter-spacing: 6px;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    color: #4e6073;
+    position: relative;
+  }
+  .special {
+    position: relative;
+  }
+  .special:before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #dfceb9;
+    position: relative;
+    transform: rotate(45deg) translateX(-50%);
+    left: 50%;
+    top: 10px;
+  }
+  .special:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 780px;
+    height: 3px;
+    background: linear-gradient(to right, #dfceb9 0%, #dfceb9 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 55%, #dfceb9 55%, #dfceb9 100%);
+  }
+  .special:before,
+  .special:after {
+    position: absolute;
+    top: 100%;
+  }
+  .line {
+    position: relative;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .line:before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #dfceb9;
+    position: relative;
+    transform: rotate(45deg) translateX(-50%);
+    left: 50%;
+    top: 10px;
+  }
+  .line:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 780px;
+    height: 3px;
+    background: linear-gradient(to right, #dfceb9 0%, #dfceb9 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 55%, #dfceb9 55%, #dfceb9 100%);
+  }
+  
+  
