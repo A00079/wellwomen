@@ -92,7 +92,7 @@ if (process.env.NODE_ENV === 'production') {
 	});
 
     app.use("/supportportal",express.static(path.join(__dirname, 'portal/build')));
-	app.get("/supportportal/*", (req, res) => {
+	app.get("/supportportal", (req, res) => {
         res.sendFile(path.join(__dirname, 'portal/build', 'index.html'));
     });
 }
