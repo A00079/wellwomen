@@ -86,14 +86,14 @@ app.use("/api/users", users);
 
 if (process.env.NODE_ENV === 'production') {
 
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(express.static(path.join(__dirname, 'Client/build')));
     app.get(/.*/, (req, res) => {
-        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
 	});
 
-    app.use("/supportportal",express.static(path.join(__dirname, 'portal/build')));
-	app.get("/supportportal", (req, res) => {
-        res.sendFile(path.join(__dirname, 'portal/build', 'index.html'));
+    app.use("/supportportal",express.static(path.join(__dirname, 'Portal/build')));
+	app.get("/supportportal/*", (req, res) => {
+        res.sendFile(path.join(__dirname, 'Portal/build', 'index.html'));
     });
 }
 

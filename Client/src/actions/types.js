@@ -1,0 +1,11 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const USER_LOADING = "USER_LOADING";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const GET_CONFIRMATION_MSG = "GET_CONFIRMATION_MSG";
+export const IS_ADMIN = "IS_ADMIN";
+export const GET_AGEGROUP = "GET_AGEGROUP";
+export const GET_GOALS = "GET_GOALS";
+export const GET_ACTIVITY_LEVEL = "GET_ACTIVITY_LEVEL";
+export const GET_EATING_HABBIT = "GET_EATING_HABBIT";
+
+
