@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "heroku-postbuild": "cd portal && npm install && npm install --only=dev --no-shrinkwrap && npm run build && cd ../client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd supportportal && npm install && npm install --only=dev --no-shrinkwrap && npm run build && cd ../mainapp && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "TeamPrathamesh",
   "license": "ISC",
