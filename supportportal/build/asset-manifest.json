@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/supportportal/static/css/main.bb7fbedd.chunk.css",
+    "main.js": "/supportportal/static/js/main.ce4f1f4f.chunk.js",
+    "main.js.map": "/supportportal/static/js/main.ce4f1f4f.chunk.js.map",
+    "runtime-main.js": "/supportportal/static/js/runtime-main.1c9c522f.js",
+    "runtime-main.js.map": "/supportportal/static/js/runtime-main.1c9c522f.js.map",
+    "static/css/2.70ef29a0.chunk.css": "/supportportal/static/css/2.70ef29a0.chunk.css",
+    "static/js/2.68283754.chunk.js": "/supportportal/static/js/2.68283754.chunk.js",
+    "static/js/2.68283754.chunk.js.map": "/supportportal/static/js/2.68283754.chunk.js.map",
+    "index.html": "/supportportal/index.html",
+    "static/css/2.70ef29a0.chunk.css.map": "/supportportal/static/css/2.70ef29a0.chunk.css.map",
+    "static/css/main.bb7fbedd.chunk.css.map": "/supportportal/static/css/main.bb7fbedd.chunk.css.map",
+    "static/js/2.68283754.chunk.js.LICENSE.txt": "/supportportal/static/js/2.68283754.chunk.js.LICENSE.txt",
+    "static/js/main.ce4f1f4f.chunk.js.LICENSE.txt": "/supportportal/static/js/main.ce4f1f4f.chunk.js.LICENSE.txt",
+    "static/media/angular.jpg": "/supportportal/static/media/angular.b5045666.jpg",
+    "static/media/argon-react-white.png": "/supportportal/static/media/argon-react-white.e4dd3b41.png",
+    "static/media/argon-react.png": "/supportportal/static/media/argon-react.128d71d3.png",
+    "static/media/avatar.024ee822.png": "/supportportal/static/media/avatar.024ee822.png",
+    "static/media/bootstrap.jpg": "/supportportal/static/media/bootstrap.bd712487.jpg",
+    "static/media/all.min.css": "/supportportal/static/media/fa-solid-900.afbdcbcc.woff",
+    "static/media/github.svg": "/supportportal/static/media/github.f7165d3e.svg",
+    "static/media/google.svg": "/supportportal/static/media/google.952443d7.svg",
+    "static/media/logo.75854c03.png": "/supportportal/static/media/logo.75854c03.png",
+    "static/media/nucleo.css": "/supportportal/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/react.jpg": "/supportportal/static/media/react.0e8c9066.jpg",
+    "static/media/sketch.jpg": "/supportportal/static/media/sketch.a6af780a.jpg",
+    "static/media/team-1-800x800.jpg": "/supportportal/static/media/team-1-800x800.fa5a7ac2.jpg",
+    "static/media/team-2-800x800.jpg": "/supportportal/static/media/team-2-800x800.3e08ef14.jpg",
+    "static/media/team-3-800x800.jpg": "/supportportal/static/media/team-3-800x800.70911cdd.jpg",
+    "static/media/team-4-800x800.jpg": "/supportportal/static/media/team-4-800x800.99c612eb.jpg",
+    "static/media/vue.jpg": "/supportportal/static/media/vue.43bd93a8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c9c522f.js",
+    "static/css/2.70ef29a0.chunk.css",
+    "static/js/2.68283754.chunk.js",
+    "static/css/main.bb7fbedd.chunk.css",
+    "static/js/main.ce4f1f4f.chunk.js"
+  ]
+}
