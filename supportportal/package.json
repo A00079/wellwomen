@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
   },
-  "homepage": ".",
+  "homepage": "https://www.curvicare.com/supportportal",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
