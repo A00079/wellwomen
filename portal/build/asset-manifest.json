@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portal/static/css/main.9a3520c5.chunk.css",
+    "main.css": "/portal/static/css/main.a02bf6d9.chunk.css",
     "main.js": "/portal/static/js/main.ff807915.chunk.js",
     "main.js.map": "/portal/static/js/main.ff807915.chunk.js.map",
     "runtime-main.js": "/portal/static/js/runtime-main.09c564cd.js",
@@ -10,7 +10,7 @@
     "static/js/2.f112a518.chunk.js.map": "/portal/static/js/2.f112a518.chunk.js.map",
     "index.html": "/portal/index.html",
     "static/css/2.9c0f5cef.chunk.css.map": "/portal/static/css/2.9c0f5cef.chunk.css.map",
-    "static/css/main.9a3520c5.chunk.css.map": "/portal/static/css/main.9a3520c5.chunk.css.map",
+    "static/css/main.a02bf6d9.chunk.css.map": "/portal/static/css/main.a02bf6d9.chunk.css.map",
     "static/js/2.f112a518.chunk.js.LICENSE.txt": "/portal/static/js/2.f112a518.chunk.js.LICENSE.txt",
     "static/js/main.ff807915.chunk.js.LICENSE.txt": "/portal/static/js/main.ff807915.chunk.js.LICENSE.txt",
     "static/media/angular.jpg": "/portal/static/media/angular.b5045666.jpg",
@@ -35,7 +35,7 @@
     "static/js/runtime-main.09c564cd.js",
     "static/css/2.9c0f5cef.chunk.css",
     "static/js/2.f112a518.chunk.js",
-    "static/css/main.9a3520c5.chunk.css",
+    "static/css/main.a02bf6d9.chunk.css",
     "static/js/main.ff807915.chunk.js"
   ]
 }
