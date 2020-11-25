@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/portal/static/css/main.2ce90c39.chunk.css",
+    "main.js": "/portal/static/js/main.fb5a1f5e.chunk.js",
+    "main.js.map": "/portal/static/js/main.fb5a1f5e.chunk.js.map",
+    "runtime-main.js": "/portal/static/js/runtime-main.09c564cd.js",
+    "runtime-main.js.map": "/portal/static/js/runtime-main.09c564cd.js.map",
+    "static/css/2.9c0f5cef.chunk.css": "/portal/static/css/2.9c0f5cef.chunk.css",
+    "static/js/2.295e3b1c.chunk.js": "/portal/static/js/2.295e3b1c.chunk.js",
+    "static/js/2.295e3b1c.chunk.js.map": "/portal/static/js/2.295e3b1c.chunk.js.map",
+    "index.html": "/portal/index.html",
+    "static/css/2.9c0f5cef.chunk.css.map": "/portal/static/css/2.9c0f5cef.chunk.css.map",
+    "static/css/main.2ce90c39.chunk.css.map": "/portal/static/css/main.2ce90c39.chunk.css.map",
+    "static/js/2.295e3b1c.chunk.js.LICENSE.txt": "/portal/static/js/2.295e3b1c.chunk.js.LICENSE.txt",
+    "static/js/main.fb5a1f5e.chunk.js.LICENSE.txt": "/portal/static/js/main.fb5a1f5e.chunk.js.LICENSE.txt",
+    "static/media/angular.jpg": "/portal/static/media/angular.b5045666.jpg",
+    "static/media/argon-react-white.png": "/portal/static/media/argon-react-white.e4dd3b41.png",
+    "static/media/argon-react.png": "/portal/static/media/argon-react.128d71d3.png",
+    "static/media/bootstrap.jpg": "/portal/static/media/bootstrap.bd712487.jpg",
+    "static/media/all.min.css": "/portal/static/media/fa-solid-900.afbdcbcc.woff",
+    "static/media/github.svg": "/portal/static/media/github.6c955556.svg",
+    "static/media/google.svg": "/portal/static/media/google.eae9aa93.svg",
+    "static/media/nucleo.css": "/portal/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/profile-cover.jpg": "/portal/static/media/profile-cover.97899245.jpg",
+    "static/media/react.jpg": "/portal/static/media/react.0e8c9066.jpg",
+    "static/media/sketch.jpg": "/portal/static/media/sketch.a6af780a.jpg",
+    "static/media/team-1-800x800.jpg": "/portal/static/media/team-1-800x800.fa5a7ac2.jpg",
+    "static/media/team-2-800x800.jpg": "/portal/static/media/team-2-800x800.3e08ef14.jpg",
+    "static/media/team-3-800x800.jpg": "/portal/static/media/team-3-800x800.70911cdd.jpg",
+    "static/media/team-4-800x800.jpg": "/portal/static/media/team-4-800x800.99c612eb.jpg",
+    "static/media/vue.jpg": "/portal/static/media/vue.43bd93a8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09c564cd.js",
+    "static/css/2.9c0f5cef.chunk.css",
+    "static/js/2.295e3b1c.chunk.js",
+    "static/css/main.2ce90c39.chunk.css",
+    "static/js/main.fb5a1f5e.chunk.js"
+  ]
+}

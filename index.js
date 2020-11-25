@@ -38,7 +38,7 @@ const fileFilter = (req, file, cb) => {
 	}
 };
 
- 
+
 app.use(
 	multer({ storage: fileStorage, fileFilter: fileFilter }).single("image"),
 );
@@ -58,23 +58,23 @@ app.use('/api/user/submitserway', SubmitSerway);
 app.use('/api/user/contact', Contact);
 app.use('/api/user/raiseticket', RaiseTicket);
 app.use('/email/confirm', VerifyUser)
-app.use('/api/admin/postBlog/create',PostBlogs)
-app.use('/api/admin/getBlog/read',PostBlogs)
-app.use('/api/admin/updateBlog',PostBlogs)
-app.use('/api/admin/deleteBlog',PostBlogs)
-app.use('/api/admin/getUsers',users)
+app.use('/api/admin/postBlog/create', PostBlogs)
+app.use('/api/admin/getBlog/read', PostBlogs)
+app.use('/api/admin/updateBlog', PostBlogs)
+app.use('/api/admin/deleteBlog', PostBlogs)
+app.use('/api/admin/getUsers', users)
 
 // DB Config
 const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true, useUnifiedTopology: true  }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+	.connect(
+		db,
+		{ useNewUrlParser: true, useUnifiedTopology: true }
+	)
+	.then(() => console.log("MongoDB successfully connected"))
+	.catch(err => console.log(err));
 
 // Passport middleware
 app.use(passport.initialize());
@@ -87,17 +87,18 @@ app.use("/api/users", users);
 
 if (process.env.NODE_ENV === 'production') {
 
-    app.use(express.static(path.join(__dirname, 'mainapp/build')));
-    app.get(/.*/, (req, res) => {
-        res.sendFile(path.join(__dirname, 'mainapp/build', 'index.html'));
+	app.use('/', express.static(path.join(__dirname, 'client/build')));
+	app.get('/', (req, res) => {
+		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 	});
 
-    app.use("/supportportal",express.static(path.join(__dirname, 'supportportal/build')));
-	app.get("/supportportal/*", (req, res) => {
-        res.sendFile(path.join(__dirname, 'supportportal/build', 'index.html'));
-    });
+	app.use("/portal", express.static(path.join(__dirname, 'portal/build')));
+	app.get("/portal/*", (req, res) => {
+		res.sendFile(path.join(__dirname, 'portal/build', 'index.html'));
+	});
+	
 }
 
 app.listen(port, () => {
-    console.log(`Server Running at ${port}`);
+	console.log(`Server Running at ${port}`);
 });
