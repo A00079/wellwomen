@@ -87,16 +87,13 @@ app.use("/api/users", users);
 
 if (process.env.NODE_ENV === 'production') {
 
-	app.use('/', express.static(path.join(__dirname, 'client/build')));
-	app.get('/', (req, res) => {
+	app.use(express.static(path.join(__dirname, 'client/build')));
+	app.get(/.*/, (req, res) => {
 		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 	});
-	app.use('/admin', express.static(path.join(__dirname, 'client/build')));
-	app.get('/admin', (req, res) => {
-		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-	});
+	
 
-	app.use("/portal", express.static(path.join(__dirname, 'portal/build')));
+	app.use('/portal', express.static(path.join(__dirname, 'portal/build')));
 	app.get("/portal/*", (req, res) => {
 		res.sendFile(path.join(__dirname, 'portal/build', 'index.html'));
 	});

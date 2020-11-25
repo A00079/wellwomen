@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portal/static/css/main.2ce90c39.chunk.css",
-    "main.js": "/portal/static/js/main.fb5a1f5e.chunk.js",
-    "main.js.map": "/portal/static/js/main.fb5a1f5e.chunk.js.map",
+    "main.js": "/portal/static/js/main.2ff9bae2.chunk.js",
+    "main.js.map": "/portal/static/js/main.2ff9bae2.chunk.js.map",
     "runtime-main.js": "/portal/static/js/runtime-main.09c564cd.js",
     "runtime-main.js.map": "/portal/static/js/runtime-main.09c564cd.js.map",
     "static/css/2.9c0f5cef.chunk.css": "/portal/static/css/2.9c0f5cef.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.9c0f5cef.chunk.css.map": "/portal/static/css/2.9c0f5cef.chunk.css.map",
     "static/css/main.2ce90c39.chunk.css.map": "/portal/static/css/main.2ce90c39.chunk.css.map",
     "static/js/2.295e3b1c.chunk.js.LICENSE.txt": "/portal/static/js/2.295e3b1c.chunk.js.LICENSE.txt",
-    "static/js/main.fb5a1f5e.chunk.js.LICENSE.txt": "/portal/static/js/main.fb5a1f5e.chunk.js.LICENSE.txt",
+    "static/js/main.2ff9bae2.chunk.js.LICENSE.txt": "/portal/static/js/main.2ff9bae2.chunk.js.LICENSE.txt",
     "static/media/angular.jpg": "/portal/static/media/angular.b5045666.jpg",
     "static/media/argon-react-white.png": "/portal/static/media/argon-react-white.e4dd3b41.png",
     "static/media/argon-react.png": "/portal/static/media/argon-react.128d71d3.png",
@@ -35,6 +35,6 @@
     "static/css/2.9c0f5cef.chunk.css",
     "static/js/2.295e3b1c.chunk.js",
     "static/css/main.2ce90c39.chunk.css",
-    "static/js/main.fb5a1f5e.chunk.js"
+    "static/js/main.2ff9bae2.chunk.js"
   ]
 }
