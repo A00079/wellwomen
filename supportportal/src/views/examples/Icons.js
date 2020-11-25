@@ -44,10 +44,10 @@ class Icons extends React.Component {
             <div className=" col">
               <Card className=" shadow">
                 <CardHeader className=" bg-transparent">
-                  <h3 className=" mb-0">Manage Tickets</h3>
+                  <h3 className=" mb-0">Icons</h3>
                 </CardHeader>
                 <CardBody>
-                  {/* <Row className=" icon-examples">
+                  <Row className=" icon-examples">
                     <Col lg="3" md="6">
                       <CopyToClipboard
                         text={"active-40"}
@@ -2888,7 +2888,7 @@ class Icons extends React.Component {
                           : "Copy To Clipbord"}
                       </UncontrolledTooltip>
                     </Col>
-                  </Row> */}
+                  </Row>
                 </CardBody>
               </Card>
             </div>

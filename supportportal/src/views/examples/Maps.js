@@ -25,7 +25,7 @@ import {
 } from "react-google-maps";
 
 // reactstrap components
-import { Card, Container, CardHeader, CardBody, Row } from "reactstrap";
+import { Card, Container, Row } from "reactstrap";
 
 // core components
 import Header from "components/Headers/Header.js";
@@ -96,11 +96,7 @@ class Maps extends React.Component {
           <Row>
             <div className="col">
               <Card className="shadow border-0">
-              <CardHeader className=" bg-transparent">
-                  <h3 className=" mb-0">Manage Team</h3>
-                </CardHeader>
-                <CardBody></CardBody>
-                {/* <MapWrapper
+                <MapWrapper
                   googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
                   loadingElement={<div style={{ height: `100%` }} />}
                   containerElement={
@@ -113,7 +109,7 @@ class Maps extends React.Component {
                   mapElement={
                     <div style={{ height: `100%`, borderRadius: "inherit" }} />
                   }
-                /> */}
+                />
               </Card>
             </div>
           </Row>

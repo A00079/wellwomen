@@ -28,14 +28,14 @@ class Footer extends React.Component {
         <Row className="align-items-center justify-content-xl-between">
           <Col xl="6">
             <div className="copyright text-center text-xl-left text-muted">
-              © 2020{" "}
+              © 2018{" "}
               <a
                 className="font-weight-bold ml-1"
                 href="https://www.creative-tim.com?ref=adr-admin-footer"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                CurviCare
+                Creative Tim
               </a>
             </div>
           </Col>
@@ -48,7 +48,7 @@ class Footer extends React.Component {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  CurviCare
+                  Creative Tim
                 </NavLink>
               </NavItem>
 
@@ -78,7 +78,7 @@ class Footer extends React.Component {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  
+                  MIT License
                 </NavLink>
               </NavItem>
             </Nav>

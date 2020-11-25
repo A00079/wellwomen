@@ -82,7 +82,7 @@ class Sidebar extends React.Component {
   createLinks = routes => {
     return routes.map((prop, key) => {
       return (
-        <NavItem key={key} className='text-white rounded'>
+        <NavItem key={key}>
           <NavLink
             to={prop.layout + prop.path}
             tag={NavLinkRRD}
@@ -90,7 +90,7 @@ class Sidebar extends React.Component {
             activeClassName="active"
           >
             <i className={prop.icon} />
-            <span className='font-black'>{prop.name}</span>
+            {prop.name}
           </NavLink>
         </NavItem>
       );
@@ -115,7 +115,6 @@ class Sidebar extends React.Component {
         className="navbar-vertical fixed-left navbar-light bg-white"
         expand="md"
         id="sidenav-main"
-        style={{ overflowY: 'hidden' }}
       >
         <Container fluid>
           {/* Toggler */}
@@ -204,10 +203,10 @@ class Sidebar extends React.Component {
                         <img alt={logo.imgAlt} src={logo.imgSrc} />
                       </Link>
                     ) : (
-                        <a href={logo.outterLink}>
-                          <img alt={logo.imgAlt} src={logo.imgSrc} />
-                        </a>
-                      )}
+                      <a href={logo.outterLink}>
+                        <img alt={logo.imgAlt} src={logo.imgSrc} />
+                      </a>
+                    )}
                   </Col>
                 ) : null}
                 <Col className="collapse-close" xs="6">
@@ -239,20 +238,39 @@ class Sidebar extends React.Component {
               </InputGroup>
             </Form>
             {/* Navigation */}
-            <Nav navbar>
-              <li class="nav-item">
-                <a aria-current="page" class="nav-link" href="/">
-                  <i class="ni ni-shop text-orange"></i>
-                  <span className='font-black'>Home</span>
-                </a>
-              </li>
-              {this.createLinks(routes)}
-              <li class="nav-item">
-                <a aria-current="page" class="nav-link" href="/">
-                  <i class="ni ni-button-power text-red"></i>
-                  <span className='font-black'>Logout</span>
-                </a>
-              </li>
+            <Nav navbar>{this.createLinks(routes)}</Nav>
+            {/* Divider */}
+            <hr className="my-3" />
+            {/* Heading */}
+            <h6 className="navbar-heading text-muted">Documentation</h6>
+            {/* Navigation */}
+            <Nav className="mb-md-3" navbar>
+              <NavItem>
+                <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/overview?ref=adr-admin-sidebar">
+                  <i className="ni ni-spaceship" />
+                  Getting started
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/colors?ref=adr-admin-sidebar">
+                  <i className="ni ni-palette" />
+                  Foundation
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/alerts?ref=adr-admin-sidebar">
+                  <i className="ni ni-ui-04" />
+                  Components
+                </NavLink>
+              </NavItem>
+            </Nav>
+            <Nav className="mb-md-3" navbar>
+              <NavItem className="active-pro active">
+                <NavLink href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=adr-admin-sidebar">
+                  <i className="ni ni-spaceship" />
+                  Upgrade to PRO
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

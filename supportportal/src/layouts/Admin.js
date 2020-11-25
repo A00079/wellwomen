@@ -23,7 +23,7 @@ import { Container } from "reactstrap";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-import logo from '../assets/img/brand/logo.png';
+
 import routes from "routes.js";
 
 class Admin extends React.Component {
@@ -34,7 +34,7 @@ class Admin extends React.Component {
   }
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/supportprotal") {
+      if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -66,8 +66,8 @@ class Admin extends React.Component {
           {...this.props}
           routes={routes}
           logo={{
-            innerLink: "/supportprotal/index",
-            imgSrc: logo,
+            innerLink: "/admin/index",
+            imgSrc: require("assets/img/brand/argon-react.png"),
             imgAlt: "..."
           }}
         />
@@ -78,7 +78,7 @@ class Admin extends React.Component {
           />
           <Switch>
             {this.getRoutes(routes)}
-            <Redirect from="*" to="/supportprotal/index" />
+            <Redirect from="*" to="/admin/index" />
           </Switch>
           <Container fluid>
             <AdminFooter />

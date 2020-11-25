@@ -29,9 +29,9 @@ import AuthLayout from "layouts/Auth.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/supportprotal" render={props => <AdminLayout {...props} />} />
+      <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Route path="/auth" render={props => <AuthLayout {...props} />} />
-      <Redirect from="/" to="/" />
+      <Redirect from="/" to="/admin/index" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

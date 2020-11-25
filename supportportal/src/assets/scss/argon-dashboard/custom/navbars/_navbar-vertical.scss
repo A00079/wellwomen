@@ -6,11 +6,6 @@
 // Vertical
 //
 // Creates a vertically aligned version of the navbar
-.navbar-light .navbar-nav .nav-link:hover{
-    background: #D00F7F;
-    border-radius: 4px;
-    color: #fff;
-}
 .navbar-vertical {
     box-shadow: $navbar-vertical-box-shadow;
     
@@ -66,7 +61,7 @@
         margin-left: -$navbar-padding-x;
         margin-right: -$navbar-padding-x;
 
-        
+
         // Navbar link
 
         .nav-link {
@@ -76,9 +71,7 @@
 
             &.active {
                 position: relative;
-                background: #D00F7F;
-                border-radius: 5px;
-                color: #fff;
+
                 &:before {
                     content: '';
                     position: absolute;
