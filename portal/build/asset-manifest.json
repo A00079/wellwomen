@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/argon-dashboard-react/static/css/main.54801e64.chunk.css",
+    "main.css": "/argon-dashboard-react/static/css/main.42c523a1.chunk.css",
     "main.js": "/argon-dashboard-react/static/js/main.12b90f9f.chunk.js",
     "main.js.map": "/argon-dashboard-react/static/js/main.12b90f9f.chunk.js.map",
     "runtime-main.js": "/argon-dashboard-react/static/js/runtime-main.1cd7bca7.js",
@@ -10,7 +10,7 @@
     "static/js/2.6fe1bf15.chunk.js.map": "/argon-dashboard-react/static/js/2.6fe1bf15.chunk.js.map",
     "index.html": "/argon-dashboard-react/index.html",
     "static/css/2.5c191709.chunk.css.map": "/argon-dashboard-react/static/css/2.5c191709.chunk.css.map",
-    "static/css/main.54801e64.chunk.css.map": "/argon-dashboard-react/static/css/main.54801e64.chunk.css.map",
+    "static/css/main.42c523a1.chunk.css.map": "/argon-dashboard-react/static/css/main.42c523a1.chunk.css.map",
     "static/js/2.6fe1bf15.chunk.js.LICENSE.txt": "/argon-dashboard-react/static/js/2.6fe1bf15.chunk.js.LICENSE.txt",
     "static/js/main.12b90f9f.chunk.js.LICENSE.txt": "/argon-dashboard-react/static/js/main.12b90f9f.chunk.js.LICENSE.txt",
     "static/media/angular.jpg": "/argon-dashboard-react/static/media/angular.b5045666.jpg",
@@ -35,7 +35,7 @@
     "static/js/runtime-main.1cd7bca7.js",
     "static/css/2.5c191709.chunk.css",
     "static/js/2.6fe1bf15.chunk.js",
-    "static/css/main.54801e64.chunk.css",
+    "static/css/main.42c523a1.chunk.css",
     "static/js/main.12b90f9f.chunk.js"
   ]
 }
