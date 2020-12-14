@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 // The credentials for the email account you want to send mail from. 
 const credentials = {
-  host: 'smtp.gmail.com',
+  host: 'smtpout.secureserver.net',
   port: 465,
   secure: true,
   auth: {

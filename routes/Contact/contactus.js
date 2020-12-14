@@ -5,7 +5,7 @@ dotenv.config();
 const nodemailer = require('nodemailer');
 
 let transport = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtpout.secureserver.net',
     port: 465,
     secure: true, // use SSL
     auth: {
