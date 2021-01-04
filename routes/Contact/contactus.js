@@ -5,7 +5,7 @@ dotenv.config();
 const nodemailer = require('nodemailer');
 
 let transport = nodemailer.createTransport({
-    host: 'smtpout.secureserver.net',
+    host: 'mail.curvicare.com',
     port: 465,
     secure: true, // use SSL
     auth: {
