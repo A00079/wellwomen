@@ -95,12 +95,16 @@ if (process.env.NODE_ENV === 'production') {
 	});
 	app.get('/*', (req, res) => {
 		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-	});
-	
-
-	
-	
+	});	
 }
+
+// If the Node process ends, close the Mongoose connection
+process.on('SIGINT', function() {
+	mongoose.connection.close(function () {
+	  console.log('Mongoose disconnected on app termination');
+	  process.exit(0);
+	});
+  });
 
 app.listen(port, () => {
 	console.log(`Server Running at ${port}`);

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const ObjectId = require('mongodb').ObjectID;
 const path = require('path');
+const mongoose = require("mongoose");
 
 // Load Blogs model
 const Blogs = require("../../models/Blogs");
@@ -68,6 +69,7 @@ router.get("/", (req, res) => {
             res.json({
                 data: blog,
             });
+            mongoose.connection.close();
         })
         .catch(err => console.log(err));
 });
